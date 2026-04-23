@@ -12,8 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <!-- Injected by server: sets window.__FORM_ACTION__ from FORM_ACTION env var -->
-  <script src="/env.js"></script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1120,13 +1119,7 @@
     });
   });
 
-  // Form: read action URL from env var injected by Railway (see /env.js)
-  // Falls back to Formspree if FORM_ACTION is not set
   const form = document.getElementById('lead-form');
-  if (form && window.__FORM_ACTION__) {
-    form.action = window.__FORM_ACTION__;
-  }
-
   form && form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('.btn-submit');
