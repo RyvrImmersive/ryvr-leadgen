@@ -1,12 +1,10 @@
 {
   "name": "ryvr-leadgen",
   "version": "1.0.0",
-  "description": "RYVR RevOps lead gen landing page",
   "scripts": {
-    "build": "echo 'Static site — no build step required'",
-    "start": "npx serve -s . -l ${PORT:-3000}"
+    "start": "node server.js"
   },
   "dependencies": {
-    "serve": "^14.2.3"
+    "express": "^4.18.2"
   }
 }
